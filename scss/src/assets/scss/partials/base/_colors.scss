@@ -1,0 +1,10 @@
+// Loops
+@each $prop, $val in $colors {
+  .text-#{$prop} {
+    color: $val;
+  }
+
+  .bg-#{$prop} {
+    background-color: $val;
+  }
+}

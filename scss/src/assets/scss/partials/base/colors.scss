@@ -1,0 +1,13 @@
+.text-yellow-color {
+  color: $yellow-color;
+}
+
+@each $prop, $wal in $colors {
+  .text-#{$prop} {
+    color: $wal;
+  }
+
+  .bg-#{$prop} {
+    background-color: $wal;
+  }
+}

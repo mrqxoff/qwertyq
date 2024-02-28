@@ -1,0 +1,68 @@
+@use "sass:math";
+
+%card-flex{
+  // flex-direction: column;
+  // align-items: center;
+  // flex-wrap: nowrap;
+  // flex-shrink: 0;
+  flex: {
+    direction: column;
+    wrap: nowrap;
+    shrink: 0;
+  }
+  align-items: center;
+}
+// parental selector & === .card
+.card {
+  max-width: 60rem;
+  width: 100%;
+  border: $line;
+  margin: 0 auto;
+  padding: 3.2rem 0;
+  border-radius: 1.5rem;
+
+  // .card .card__wrapper {}
+  &__wrapper {
+    display: flex;
+    @extend %card-flex;
+  }
+
+  // .card .card__img {}
+  &__img {
+    width: 35rem;
+    height: 30rem;
+  }
+
+  &__about {
+    margin-top: 2rem;
+    display: flex;
+    @extend %card-flex;
+  }
+
+  &__title {
+    @include font(timesTwo(2.1));
+  }
+
+  &__subtitle {
+    text-align: center;
+    @include font;
+  }
+
+  &__price {
+    @include font(timesTwo(1.2));
+  }
+}
+
+// Arifmetic operators - + / *
+@debug 2 + 3;
+@debug 3 - 1;
+@debug 4 * 2;
+@debug math.div(math.floor($number), 3);
+@debug math.ceil(4.1);
+@debug math.floor(3.9);
+@debug math.clamp(-5rem, 0rem, 5rem);
+@debug math.max($sizes...);
+@debug math.min($sizes...);
+@debug math.round(1.6);
+@debug math.abs(-10rem);
+@debug math.abs(10rem);

@@ -1,0 +1,9 @@
+@use "sass:color";
+
+@function complementColor() {
+  @return color.complement($orange-color);
+}
+
+@function timesTwo($num) {
+  @return $num * 2;
+}

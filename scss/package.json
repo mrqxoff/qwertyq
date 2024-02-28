@@ -1,0 +1,16 @@
+{
+  "name": "scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devServer": "cd public && live-server --host=localhost --port=8080 --entry-file=index.html",
+    "compile:css": "sass src/assets/scss/main.scss public/assets/css/style.css -w",
+    "compile:html": "pug -P src/pug/index.pug -o public/ -w",
+    "minify:img": "imagemin src/assets/images/*.{png,jpg,jpeg,gif,jfif} -o public/assets/images",
+    "start": "npm-run-all --parallel compile:html compile:css minify:img devServer"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,26 @@
+@use "sass:list";
+
+.u-border-bottom {
+  border-bottom: $line;
+}
+
+.u-px-py {
+  padding: 25px 30px;
+}
+
+// Loops
+// $i: 0;
+// @each $size in $sizes {
+//   $i: $i + 1;
+//   // $i: index($sizes, $size);
+//   .u-mt-#{$i} {
+//     color: $size;
+//   }
+// }
+
+@for $i from 1 through list.length($sizes) {
+  $size: nth($sizes, $i);
+  .u-mt-#{$i} {
+    margin-top: $size;
+  }
+}

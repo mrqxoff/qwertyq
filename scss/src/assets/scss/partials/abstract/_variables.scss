@@ -1,0 +1,19 @@
+// Variables
+$orange-color: #ff4500;
+$yellow-color: #fef110;
+$gray-color: #e3e3e3;
+
+$line: 1px solid rgba(0, 0, 0, 0.2);
+
+$number: 12.4;
+$sizes: 40px, 100px, 200px;
+
+// Maps
+$colors: (
+  "white": #f1f1f1,
+  "blue": #2e78f0,
+  "green": #149947,
+  "orange": $orange-color,
+  "yellow": $yellow-color,
+  "gray": $gray-color,
+);

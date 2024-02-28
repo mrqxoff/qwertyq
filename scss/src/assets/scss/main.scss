@@ -1,0 +1,14 @@
+// functions & mixins & variables
+@import "./partials/abstract/variables";
+@import "./partials/abstract/mixins";
+@import "./partials/abstract/functions";
+
+// reset & typography & colors & utilities
+@import "./partials/base/reset";
+@import "./partials/base/typography";
+@import "./partials/base/colors";
+@import "./partials/base/utilities";
+
+// card & button
+@import "./partials/components/card";
+@import "./partials/components/button";
